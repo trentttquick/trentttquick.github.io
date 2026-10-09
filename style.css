@@ -1,0 +1,187 @@
+/* Trenton Quick
+09/25/2026
+style.css */
+
+/* CSS Reset */
+html, body, header, nav, main, footer, h1, h2, h3, p,
+ul, ol, li, img, a, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #003366;
+}
+
+a:hover {
+    color: #0055aa;
+}
+
+/* Header Styles */
+header {
+    background-color: #001f3f;
+}
+
+/* Nav Styles */
+nav {
+    background-color: #003366;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+/* Main & Typography Styles */
+main {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+    color: #001f3f;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0.5rem;
+}
+
+.highlight {
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-img {
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+#feature {
+    border: 0.125rem solid #003366;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #001f3f;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/* Mobile-first styles */
+/* Hide tablet and desktop content on mobile */
+.tablet-desktop {
+    display: none;
+}
+
+.mobile-only {
+    display: block;
+}
+
+/* Tablet Media Query Begins */
+@media screen and (min-width: 768px) {
+
+    /* Show tablet and desktop content */
+    .tablet-desktop {
+        display: block;
+    }
+
+    /* Hide mobile-specific content */
+    .mobile-only {
+        display: none;
+    }
+
+    /* Tablet navigation layout */
+    nav li {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    /* Larger feature section */
+    #feature {
+        padding: 2rem;
+    }
+}
+
+/* Desktop Media Query Begins */
+@media screen and (min-width: 1024px) {
+
+    /* Desktop navigation */
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Dynamic pseudo-class */
+    nav a:hover {
+        background-color: #0055aa;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+
+    /* Wider main content area */
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Gallery Layout */
+.gallery-container {
+    display: grid;
+    /* Automatically creates columns that are at least 250px wide */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.gallery-container img {
+    width: 100%;      
+    height: 250px;     
+    object-fit: cover; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
